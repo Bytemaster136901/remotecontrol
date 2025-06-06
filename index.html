@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chromecast Bluetooth Remote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #202124; color: #fff; }
+    #remote { display: inline-block; margin-top: 50px; background: #303134; border-radius: 20px; padding: 30px 20px; }
+    .row { display: flex; justify-content: center; margin: 10px 0; }
+    button {
+      width: 60px; height: 60px; margin: 0 10px;
+      border: none; border-radius: 50%; background: #444;
+      color: #fff; font-size: 24px; cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:active { background: #888; }
+    #connectBtn { background: #1a73e8; width: auto; border-radius: 10px; }
+    #status { margin: 15px 0; }
+  </style>
+</head>
+<body>
+  <h2>Chromecast Bluetooth Remote</h2>
+  <button id="connectBtn">Connect Bluetooth</button>
+  <div id="status">Not connected</div>
+  <div id="remote" style="visibility:hidden;">
+    <div class="row">
+      <button id="power" title="Turn Off">&#x23FB;</button>
+    </div>
+    <div class="row">
+      <button id="up" title="Up">&#8593;</button>
+    </div>
+    <div class="row">
+      <button id="left" title="Left">&#8592;</button>
+      <button id="ok" title="OK">&#x2714;</button>
+      <button id="right" title="Right">&#8594;</button>
+    </div>
+    <div class="row">
+      <button id="down" title="Down">&#8595;</button>
+    </div>
+    <div class="row">
+      <button id="back" title="Back">&#x21A9;</button>
+      <button id="home" title="Home">&#x2302;</button>
+      <button id="menu" title="Menu">&#9776;</button>
+    </div>
+    <div class="row">
+      <button id="volup" title="Volume Up">&#128316;</button>
+      <button id="voldown" title="Volume Down">&#128317;</button>
+      <button id="mute" title="Mute">&#128263;</button>
+    </div>
+  </div>
+
+  <script src="remote.js"></script>
+</body>
+</html>
